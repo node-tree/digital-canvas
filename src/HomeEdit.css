@@ -1,0 +1,123 @@
+.about-edit-form .form-group {
+  margin-bottom: 2rem;
+}
+
+.about-edit-form label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.about-edit-form input[type="text"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.about-edit-form input[type="text"]:focus {
+  outline: none;
+  border-color: #868e96;
+  box-shadow: 0 0 0 2px rgba(52, 58, 64, 0.1);
+}
+
+.editor-container {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.menu-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.menu-bar button {
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  color: #495057;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.menu-bar button.is-active {
+  background-color: #343a40;
+  color: #fff;
+  border-color: #343a40;
+}
+
+.menu-bar button svg {
+  vertical-align: middle;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.tiptap-editor {
+  padding: 1.5rem 1rem;
+  min-height: 300px;
+}
+
+.tiptap-editor:focus {
+  outline: none;
+}
+
+.tiptap-editor img {
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-url-input-container {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.image-url-input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+.image-url-submit-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-submit {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #000;
+  color: white;
+  border: 1px solid #000;
+  font-size: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: #333;
+  border-color: #333;
+} 

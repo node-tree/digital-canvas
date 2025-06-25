@@ -1,0 +1,36 @@
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.notice-item {
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.notice-item:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.notice-item-link {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.notice-date {
+  font-size: 0.9rem;
+  color: #868e96;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.notice-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #343a40;
+} 

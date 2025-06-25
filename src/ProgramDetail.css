@@ -1,0 +1,44 @@
+/* Add your styles for ProgramDetail component here */
+
+/* Example style */
+.program-detail {
+    /* Add styles here */
+}
+
+/* Modern styles for ProgramDetail component */
+
+.program-detail-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.program-detail-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.program-detail-page p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+}
+
+.program-detail-page button {
+    padding: 8px 16px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.program-detail-page button:hover {
+    background-color: #333;
+} 

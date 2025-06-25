@@ -1,0 +1,879 @@
+.home-header {
+  text-align: center; /* 내부 요소들을 중앙 정렬 */
+  padding: 2rem;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* 컨테이너를 수평 중앙 정렬 */
+}
+
+.main-image {
+  display: block; /* margin: auto 적용을 위해 block 요소로 변경 */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.content-display {
+  line-height: 1.7;
+  text-align: center;
+}
+
+.content-display img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.admin-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-edit {
+  background-color: #000;
+  color: white;
+  border-color: #000;
+}
+
+.mainpage-root {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: #111;
+  text-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #555;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+.scroll-down-anim {
+  font-size: 2.5rem;
+  color: #bbb;
+  margin-top: 2.5rem;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(16px); }
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  margin-top: -60px;
+  margin-bottom: 40px;
+  z-index: 2;
+  position: relative;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.about-card h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+.about-desc {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.about-desc img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  object-fit: contain;
+}
+
+.features-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2.2rem;
+  letter-spacing: -0.5px;
+}
+
+.features-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin: 0 auto 60px auto;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.circle-card {
+  background: #fff;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  min-width: 120px;
+  min-height: 120px;
+  max-width: 180px;
+  max-height: 180px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  transition: transform 0.18s, box-shadow 0.18s;
+  padding: 0;
+}
+
+.circle-card:hover {
+  transform: scale(1.06) translateY(-6px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+
+.circle-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  line-height: 1.3;
+  padding: 0 1.2rem;
+  word-break: keep-all;
+}
+
+@media (max-width: 900px) {
+  .apple-feature-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+    gap: 0.3rem !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 1.2rem !important;
+    width: 100% !important;
+  }
+  .circle-card {
+    width: 72px !important;
+    height: 72px !important;
+    min-width: 72px !important;
+    min-height: 72px !important;
+    max-width: 72px !important;
+    max-height: 72px !important;
+    font-size: 0.82rem !important;
+    margin-bottom: 0 !important;
+    flex: 1 1 22% !important;
+  }
+  .circle-label {
+    font-size: 0.82rem !important;
+    padding: 0 0.2rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+  }
+  .circle-card {
+    width: 90vw;
+    height: 90vw;
+    min-width: 0;
+    min-height: 0;
+    max-width: 98vw;
+    max-height: 98vw;
+  }
+  .features-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.admin-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-edit {
+  background-color: #000;
+  color: white;
+  border-color: #000;
+}
+
+.features-desc-sub {
+  width: 100%;
+  text-align: center;
+  font-size: 0.98rem;
+  color: #888;
+  margin-top: -1.2rem;
+  margin-bottom: 2.1rem;
+  line-height: 1.6;
+  letter-spacing: -0.2px;
+}
+
+.apple-main-root {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.hero-apple {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  text-align: center;
+  padding-top: 4rem;
+}
+.hero-main {
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #111;
+  margin-bottom: 1.2rem;
+}
+.hero-sub {
+  font-size: 1.5rem;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+
+.apple-section {
+  padding: 5rem 0 3rem 0;
+  background: #fff;
+  text-align: center;
+}
+.apple-headline {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #111;
+}
+.apple-desc {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.apple-feature-row {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.apple-feature {
+  background: #fafbfc;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 2.2rem 1.5rem 1.7rem 1.5rem;
+  min-width: 200px;
+  max-width: 260px;
+  flex: 1 1 220px;
+  margin: 0.5rem 0;
+}
+.apple-feature h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #222;
+}
+.apple-feature p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .apple-feature-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .hero-main {
+    font-size: 2.5rem;
+  }
+}
+
+.hero-2col {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: 32vh;
+  padding: 3.5rem 0 1.5rem 0;
+  background: #fff;
+}
+.hero-left {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-left: 2.5vw;
+}
+.hero-open {
+  font-size: 1.1rem;
+  color: #aaa;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+.hero-right {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 2.5vw;
+}
+.hero-main {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #111;
+  margin: 0;
+  text-align: right;
+}
+.hero-image-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+.hero-image-main {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  background: #f5f5f5;
+}
+@media (max-width: 900px) {
+  .hero-2col {
+    flex-direction: column;
+    align-items: center;
+    padding: 2.2rem 0 1.2rem 0;
+  }
+  .hero-left, .hero-right {
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-main {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .hero-image-main {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+  }
+}
+
+.apple-hero-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1100px;
+  margin: 0 auto 1.5rem auto;
+  padding: 7rem 2.5rem 0 2.5rem;
+}
+.apple-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #222;
+  margin: 0;
+}
+.apple-slogan {
+  font-size: 1.15rem;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.apple-hero-box {
+  background: #111;
+  border-radius: 36px;
+  padding: 2.2rem 1.2rem 1.2rem 1.2rem;
+  margin: 0 auto 3.5rem auto;
+  max-width: 1100px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+.apple-hero-content {
+  flex: 1;
+  color: #fff;
+  z-index: 2;
+}
+.apple-hero-maintext {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.2rem;
+}
+.apple-hero-subtext {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 2.2rem;
+}
+.apple-hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.apple-btn {
+  background: #111;
+  color: #fff;
+  border: 1.5px solid #222;
+  border-radius: 22px;
+  padding: 0.85rem 2.2rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  transition: background 0.2s, color 0.2s, box-shadow 0.18s, border 0.18s;
+  outline: none;
+  position: relative;
+}
+.apple-btn.outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  font-weight: 700;
+}
+.apple-btn:hover, .apple-btn:focus {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  border-color: #fff;
+}
+.apple-hero-image {
+  width: 340px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 18px;
+  margin-left: 2.5rem;
+  background: #222;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+@media (max-width: 900px) {
+  .apple-hero-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 1rem 0 1rem;
+    gap: 0.5rem;
+  }
+  .apple-title {
+    font-size: 2rem;
+  }
+  .apple-hero-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    width: 96%;
+    margin: 0 auto 2.2rem auto;
+  }
+  .apple-hero-image {
+    width: 100%;
+    max-width: 320px;
+    margin: 2rem 0 0 0;
+    align-self: center;
+  }
+}
+
+.edit-btn-row {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.edit-input {
+  font-size: 1.08rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  margin-bottom: 0.7rem;
+  margin-right: 0.7rem;
+  outline: none;
+  font-family: inherit;
+  background: #fafbfc;
+  color: #222;
+  transition: border 0.2s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.edit-input.main {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  background: #fff;
+  border: 1.5px solid #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.edit-input.sub {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  background: #fff;
+  border: 1.5px solid #eee;
+}
+.edit-input.btn {
+  font-size: 1rem;
+  width: 150px;
+  margin-bottom: 0;
+  background: #fff;
+  border: 1.5px solid #eee;
+}
+.edit-input.btn-link {
+  font-size: 1rem;
+  width: 180px;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid #eee;
+  background: #fff;
+  color: #222;
+  margin-bottom: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: border 0.18s, box-shadow 0.18s;
+}
+.edit-input.btn-link:focus {
+  border: 1.5px solid #111;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.edit-hero-btn {
+  margin-top: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.2rem 0.7rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.edit-hero-btn:hover {
+  background: #222;
+}
+
+.apple-hero-about-html, .tiptap-editor-wrap {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+.apple-hero-about-html p {
+  margin: 0 0 1.1em 0;
+  color: #f5f5f5;
+  font-size: 1.08rem;
+}
+.apple-hero-about-html strong {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.15em;
+}
+.apple-hero-about-html img {
+  display: block;
+  max-width: 90%;
+  margin: 1.5rem auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+
+.apple-hero-flexrow {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  gap: 0;
+  min-height: 320px;
+}
+.apple-hero-leftcol, .apple-hero-rightcol {
+  width: 50%;
+  flex: 0 0 50%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.apple-hero-leftcol {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2.5rem 2rem 2.5rem 0;
+  border-right: 1.5px solid rgba(255,255,255,0.10);
+}
+.apple-hero-rightcol {
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 0 2.5rem 2rem;
+}
+.apple-hero-maintext {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin-bottom: 2.2rem;
+  color: #fff;
+  text-align: left;
+}
+.apple-hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 900px) {
+  .apple-hero-flexrow {
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 0;
+  }
+  .apple-hero-leftcol, .apple-hero-rightcol {
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 1.2rem 0 1.2rem 0;
+    border: none;
+    align-items: center;
+    text-align: center;
+  }
+  .apple-hero-rightcol {
+    padding: 0;
+  }
+  .apple-hero-about-html, .tiptap-editor-wrap {
+    max-width: 100%;
+    text-align: center;
+  }
+  .edit-btn-row {
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1.1rem;
+    align-items: stretch;
+  }
+  .edit-input, .edit-input.btn, .edit-input.btn-link {
+    width: 100% !important;
+    min-width: 0;
+    font-size: 1rem;
+    margin-right: 0;
+    margin-bottom: 0.7rem;
+    box-sizing: border-box;
+  }
+  .tiptap-editor-wrap {
+    padding: 0.5rem 0.1rem 0.5rem 0.1rem;
+    min-width: 0;
+    box-sizing: border-box;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  .tiptap-toolbar {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.edit-input.edit-contentarea {
+  background: rgba(255,255,255,0.13);
+  color: #222;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  font-size: 1.08rem;
+  font-family: 'SUIT', 'Pretendard', 'Apple SD Gothic Neo', 'sans-serif';
+  padding: 1.3rem 1.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  min-height: 180px;
+  max-height: 420px;
+  line-height: 1.7;
+  transition: box-shadow 0.18s, border 0.18s;
+  outline: none;
+  resize: vertical;
+  width: 100%;
+}
+.edit-input.edit-contentarea:focus {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.16);
+  border: 2px solid #222;
+  background: #fff;
+  color: #111;
+}
+
+.tiptap-editor-wrap {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 12px;
+  background: #fafbfc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-height: 180px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.tiptap-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+  background: transparent;
+  justify-content: center;
+  width: 100%;
+}
+.tiptap-toolbar button {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #eee;
+  border-radius: 7px;
+  padding: 0.32em 0.9em;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s, border 0.15s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.tiptap-toolbar button.active, .tiptap-toolbar button:active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+.tiptap-toolbar button:hover {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+.tiptap-content {
+  min-height: 120px;
+  font-size: 1.08rem;
+  font-family: 'SUIT', 'Pretendard', 'Apple SD Gothic Neo', 'sans-serif';
+  color: #222;
+  background: transparent;
+  outline: none;
+  border: none;
+  line-height: 1.7;
+  padding: 0;
+}
+.tiptap-content p { margin: 0 0 1em 0; }
+.tiptap-content h1, .tiptap-content h2 {
+  font-weight: 800;
+  margin: 0.7em 0 0.5em 0;
+}
+.tiptap-content img {
+  max-width: 90%;
+  border-radius: 12px;
+  margin: 1.2em auto;
+  display: block;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.apple-hero-mainimg {
+  display: block;
+  width: 320px;
+  max-width: 90%;
+  height: auto;
+  margin: 1.2rem 0 1.7rem 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  background: #f5f5f5;
+  object-fit: contain;
+}
+@media (max-width: 900px) {
+  .apple-hero-mainimg {
+    width: 100%;
+    max-width: 320px;
+    margin: 1rem 0 1.2rem 0;
+    border-radius: 14px;
+  }
+}
+
+.apple-hero-buttons .apple-btn:first-child {
+  background: transparent;
+  color: #fff;
+  border: 2.5px solid #fff;
+  font-weight: 700;
+  box-shadow: none;
+}
+.apple-hero-buttons .apple-btn:first-child:hover, .apple-hero-buttons .apple-btn:first-child:focus {
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+} 

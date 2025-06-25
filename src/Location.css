@@ -1,0 +1,67 @@
+.location-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.location-content {
+  display: flex;
+  gap: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.location-map {
+  flex: 2;
+  min-height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.location-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.location-info h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.location-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.location-info p strong {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+.api-key-missing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background-color: #e9ecef;
+  color: #6c757d;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .location-content {
+    flex-direction: column;
+  }
+} 
