@@ -62,6 +62,10 @@ function Home() {
   const [editBtn2Link, setEditBtn2Link] = useState('');
   const [editContent, setEditContent] = useState('');
 
+  // 이미지 상태 추가
+  const [mainImage, setMainImage] = useState('http://nodetree.cafe24.com/%B5%F0%C1%F6%C5%D0%B5%B5%C8%AD%BC%AD/main.png');
+  const [editMainImage, setEditMainImage] = useState('');
+
   // Tiptap 에디터 인스턴스
   const editor = useEditor({
     extensions: [
@@ -148,6 +152,7 @@ function Home() {
       setBtn2(about.btn2 || '프로그램 보기');
       setBtn1Link(about.btn1Link || '');
       setBtn2Link(about.btn2Link || '');
+      setMainImage(about.mainImage || 'http://nodetree.cafe24.com/%B5%F0%C1%F6%C5%D0%B5%B5%C8%AD%BC%AD/main.png');
     }
   }, [about]);
 
@@ -173,6 +178,7 @@ function Home() {
     setEditBtn1Link(btn1Link);
     setEditBtn2Link(btn2Link);
     setEditContent(about.content || '');
+    setEditMainImage(mainImage || '');
     if (editor) {
       editor.commands.setContent(about.content || '');
     }
@@ -196,6 +202,7 @@ function Home() {
           btn2: editBtn2,
           btn1Link: editBtn1Link,
           btn2Link: editBtn2Link,
+          mainImage: editMainImage,
           content: htmlContent,
         }),
       });
@@ -229,6 +236,13 @@ function Home() {
               <>
                 <input className="edit-input main" value={editMain} onChange={e => setEditMain(e.target.value)} />
                 <input className="edit-input sub" value={editSub} onChange={e => setEditSub(e.target.value)} />
+                {/* 이미지 URL 입력 및 미리보기 */}
+                <div style={{margin:'1rem 0'}}>
+                  <input className="edit-input img" value={editMainImage} onChange={e => setEditMainImage(e.target.value)} placeholder="대표 이미지 URL" style={{width: '80%'}} />
+                  <div style={{marginTop:'0.5rem'}}>
+                    <img src={editMainImage || 'https://via.placeholder.com/320x120?text=Digital+Canvas'} alt="미리보기" style={{maxWidth:320, maxHeight:120, borderRadius:8, border:'1px solid #eee'}} />
+                  </div>
+                </div>
                 <div className="apple-hero-buttons">
                   <div style={{display:'flex', flexDirection:'column', alignItems:'flex-start', gap:'0.5rem'}}>
                     <div style={{display:'flex', gap:'0.5rem', alignItems:'center'}}>
@@ -249,8 +263,9 @@ function Home() {
             ) : (
               <>
                 <div className="apple-hero-maintext">{mainText}</div>
+                <div className="apple-hero-subtext">{subText}</div>
                 <img
-                  src="http://nodetree.cafe24.com/%B5%F0%C1%F6%C5%D0%B5%B5%C8%AD%BC%AD/main.png"
+                  src={mainImage}
                   alt="디지털캔버스 대표 이미지"
                   className="apple-hero-mainimg"
                   onError={e => { e.target.onerror=null; e.target.src='https://via.placeholder.com/320x120?text=Digital+Canvas'; }}
